@@ -1,14 +1,14 @@
-import { NgModule, APP_INITIALIZER, Inject } from '@angular/core';
+import { APP_INITIALIZER, Inject, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule, CommonExampleConfigs, CommonExampleComponents, debugFields } from '../common';
+import { CommonExampleComponents, CommonExampleConfigs, CommonModule, debugFields } from '../common';
 
 import { AppComponent } from './app.component';
 import { FormlyIonicModule } from '@ngx-formly/ionic';
 import { IonicModule } from '@ionic/angular';
 
-import { DatetimeAppModule, DatetimeExampleConfig, DatetimeAppComponent } from './datetime';
-import { RangeAppModule, RangeExampleConfig, RangeAppComponent } from './range';
-import { ToggleAppModule, ToggleExampleConfig, ToggleAppComponent } from './toggle';
+import { DatetimeAppComponent, DatetimeAppModule, DatetimeExampleConfig } from './datetime';
+import { RangeAppComponent, RangeAppModule, RangeExampleConfig } from './range';
+import { ToggleAppComponent, ToggleAppModule, ToggleExampleConfig } from './toggle';
 
 @NgModule({
   imports: [

@@ -28,15 +28,14 @@ export function maxValidationMessage(err, field) {
     FormlyBootstrapModule,
     FormlyModule.forRoot({
       validationMessages: [
-        {name: 'required', message: 'This field is required'},
-        {name: 'minlength', message: minlengthValidationMessage},
-        {name: 'maxlength', message: maxlengthValidationMessage},
-        {name: 'min', message: minValidationMessage},
-        {name: 'max', message: maxValidationMessage},
+        { name: 'required', message: 'This field is required' },
+        { name: 'minlength', message: minlengthValidationMessage },
+        { name: 'maxlength', message: maxlengthValidationMessage },
+        { name: 'min', message: minValidationMessage },
+        { name: 'max', message: maxValidationMessage },
       ],
     }),
   ],
   declarations: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

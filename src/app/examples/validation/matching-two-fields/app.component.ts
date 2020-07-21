@@ -14,7 +14,7 @@ export class AppComponent {
   fields: FormlyFieldConfig[] = [
     {
       validators: {
-        validation: [{name: 'fieldMatch', options: {errorPath: 'passwordConfirm'}}],
+        validation: [{ name: 'fieldMatch', options: { errorPath: 'passwordConfirm' } }],
       },
       fieldGroup: [
         {

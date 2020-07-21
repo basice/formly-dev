@@ -16,11 +16,10 @@ import { addonsExtension } from './addons.extension';
     FormlyMaterialModule,
     MatIconModule,
     FormlyModule.forRoot({
-      wrappers: [{name: 'addons', component: FormlyWrapperAddons}],
-      extensions: [{name: 'addons', extension: {onPopulate: addonsExtension}}],
+      wrappers: [{ name: 'addons', component: FormlyWrapperAddons }],
+      extensions: [{ name: 'addons', extension: { onPopulate: addonsExtension } }],
     }),
   ],
   declarations: [AppComponent, FormlyWrapperAddons],
 })
-export class AppModule {
-}
+export class AppModule {}

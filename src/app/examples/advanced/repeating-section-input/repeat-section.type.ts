@@ -5,5 +5,4 @@ import { FieldArrayType } from '@ngx-formly/core';
   selector: 'formly-repeat-section',
   template: ` <formly-field *ngFor="let field of field.fieldGroup" [field]="field"></formly-field> `,
 })
-export class RepeatTypeComponent extends FieldArrayType {
-}
+export class RepeatTypeComponent extends FieldArrayType {}

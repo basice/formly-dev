@@ -15,12 +15,12 @@ export class AppComponent {
     {
       key: 'address2',
       wrappers: ['accordion'],
-      templateOptions: {label: 'Grunduppgifter och skattesatser'},
+      templateOptions: { label: 'Grunduppgifter och skattesatser' },
       fieldGroup: [
         {
           key: 'address2a',
           wrappers: ['panel'],
-          templateOptions: {label: 'Obligatoriska uppgifter'},
+          templateOptions: { label: 'Obligatoriska uppgifter' },
           fieldGroup: [
             {
               key: 'town',
@@ -44,7 +44,7 @@ export class AppComponent {
         {
           key: 'address2b',
           wrappers: ['panel'],
-          templateOptions: {label: 'Andra grunduppgifter'},
+          templateOptions: { label: 'Andra grunduppgifter' },
           fieldGroup: [
             {
               key: 'town',

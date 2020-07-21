@@ -39,9 +39,9 @@ export class AppComponent {
       templateOptions: {
         label: 'Favorite Candy (initialized via default value',
         options: [
-          {label: 'Snickers', value: 'snickers'},
-          {label: 'Baby Ruth', value: 'baby_ruth'},
-          {label: 'Milky Way', value: 'milky_way'},
+          { label: 'Snickers', value: 'snickers' },
+          { label: 'Baby Ruth', value: 'baby_ruth' },
+          { label: 'Milky Way', value: 'milky_way' },
         ],
       },
     },

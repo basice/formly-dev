@@ -10,7 +10,7 @@ export function minlengthValidationMessages(err, field) {
 }
 
 export function fieldMatchValidator(control: AbstractControl) {
-  const {password, passwordConfirm} = control.value;
+  const { password, passwordConfirm } = control.value;
 
   // avoid displaying the message error when values are empty
   if (!passwordConfirm || !password) {
@@ -21,7 +21,7 @@ export function fieldMatchValidator(control: AbstractControl) {
     return null;
   }
 
-  return {fieldMatch: {message: 'Password Not Matching'}};
+  return { fieldMatch: { message: 'Password Not Matching' } };
 }
 
 @NgModule({
@@ -30,14 +30,13 @@ export function fieldMatchValidator(control: AbstractControl) {
     ReactiveFormsModule,
     FormlyBootstrapModule,
     FormlyModule.forRoot({
-      validators: [{name: 'fieldMatch', validation: fieldMatchValidator}],
+      validators: [{ name: 'fieldMatch', validation: fieldMatchValidator }],
       validationMessages: [
-        {name: 'required', message: 'This field is required'},
-        {name: 'minlength', message: minlengthValidationMessages},
+        { name: 'required', message: 'This field is required' },
+        { name: 'minlength', message: minlengthValidationMessages },
       ],
     }),
   ],
   declarations: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

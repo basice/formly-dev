@@ -16,13 +16,12 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     FormlyBootstrapModule,
     FormlyModule.forRoot({
       wrappers: [
-        {name: 'panel', component: PanelWrapperComponent},
-        {name: 'accordion', component: AccordionWrapperComponent}
+        { name: 'panel', component: PanelWrapperComponent },
+        { name: 'accordion', component: AccordionWrapperComponent },
       ],
     }),
     AccordionModule.forRoot(),
   ],
   declarations: [AppComponent, PanelWrapperComponent, AccordionWrapperComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

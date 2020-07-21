@@ -46,5 +46,4 @@ import { AppComponent } from './app.component';
   ],
   entryComponents: [AppComponent],
 })
-export class ConfigModule {
-}
+export class ConfigModule {}

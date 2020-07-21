@@ -5,11 +5,7 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'formly-examples-viewer',
   template: `
     <ng-container *ngIf="router.data | async as data">
-      <formly-example-viewer
-        *ngFor="let exampleData of data.examples"
-        [type]="type"
-        [exampleData]="exampleData"
-      >
+      <formly-example-viewer *ngFor="let exampleData of data.examples" [type]="type" [exampleData]="exampleData">
       </formly-example-viewer>
     </ng-container>
   `,

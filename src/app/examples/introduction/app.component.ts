@@ -44,7 +44,7 @@ export class AppComponent {
     {
       key: 'awesome',
       type: 'checkbox',
-      templateOptions: {label: ''},
+      templateOptions: { label: '' },
       expressionProperties: {
         'templateOptions.disabled': 'formState.awesomeIsForced',
         'templateOptions.label': (model, formState) => {

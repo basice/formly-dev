@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FieldType } from '@ngx-formly/material';
 import { MatInput } from '@angular/material/input';
 import { MatAutocompleteTrigger } from '@angular/material/autocomplete';

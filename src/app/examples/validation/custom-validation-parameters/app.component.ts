@@ -31,7 +31,7 @@ export class AppComponent {
         type: 'date',
       },
       validators: {
-        validation: [{name: 'date-future', options: {days: 5}}],
+        validation: [{ name: 'date-future', options: { days: 5 } }],
       },
     },
   ];

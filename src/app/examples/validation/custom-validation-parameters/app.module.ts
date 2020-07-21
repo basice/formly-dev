@@ -6,7 +6,7 @@ import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { AppComponent } from './app.component';
 
 export function dateFutureValidator(control: FormControl, field: FormlyFieldConfig, options = {}): ValidationErrors {
-  return {'date-future': {message: `Validator options: ${JSON.stringify(options)}`}};
+  return { 'date-future': { message: `Validator options: ${JSON.stringify(options)}` } };
 }
 
 @NgModule({
@@ -19,12 +19,11 @@ export function dateFutureValidator(control: FormControl, field: FormlyFieldConf
         {
           name: 'date-future',
           validation: dateFutureValidator,
-          options: {days: 2},
+          options: { days: 2 },
         },
       ],
     }),
   ],
   declarations: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

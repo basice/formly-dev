@@ -25,8 +25,7 @@ export class AppComponent {
     },
   ];
 
-  constructor(private dataService: DataService) {
-  }
+  constructor(private dataService: DataService) {}
 
   submit() {
     alert(JSON.stringify(this.model));

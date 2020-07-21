@@ -4,7 +4,6 @@ import { ExamplesRouterViewerComponent, SharedModule } from '@shared';
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 
-
 @NgModule({
   imports: [
     SharedModule,
@@ -41,5 +40,4 @@ import { AppComponent } from './app.component';
   ],
   entryComponents: [AppComponent],
 })
-export class ConfigModule {
-}
+export class ConfigModule {}

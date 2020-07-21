@@ -73,7 +73,7 @@ export class AppComponent {
         },
       ],
     },
-    {template: '<hr />'},
+    { template: '<hr />' },
     {
       type: 'textarea',
       key: 'otherInput',

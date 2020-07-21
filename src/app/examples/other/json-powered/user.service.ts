@@ -5,8 +5,7 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
 
 @Injectable()
 export class UserService {
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getUserData(): Observable<any> {
     return forkJoin([this.getUser(), this.getFields()]);

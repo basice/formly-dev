@@ -13,15 +13,7 @@ import { ExampleViewerComponent } from './example-viewer/example-viewer.componen
 import { ExamplesRouterViewerComponent } from './examples-router-viewer/examples-router-viewer.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatTooltipModule,
-    MatTabsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    FormlyModule,
-  ],
+  imports: [CommonModule, MatTooltipModule, MatTabsModule, MatMenuModule, MatIconModule, MatButtonModule, FormlyModule],
   exports: [
     CommonModule,
     MatSidenavModule,

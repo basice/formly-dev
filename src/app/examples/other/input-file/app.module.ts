@@ -14,10 +14,9 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     FormlyBootstrapModule,
     FormlyModule.forRoot({
-      types: [{name: 'file', component: FormlyFieldFile, wrappers: ['form-field']}],
+      types: [{ name: 'file', component: FormlyFieldFile, wrappers: ['form-field'] }],
     }),
   ],
   declarations: [FileValueAccessor, FormlyFieldFile, AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

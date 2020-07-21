@@ -44,9 +44,9 @@ export class AppComponent {
       type: 'datatable',
       templateOptions: {
         columns: [
-          {name: 'Name of Investment', prop: 'investmentName'},
-          {name: 'Date of Investment', prop: 'investmentDate'},
-          {name: 'Stock Identifier', prop: 'stockIdentifier'},
+          { name: 'Name of Investment', prop: 'investmentName' },
+          { name: 'Date of Investment', prop: 'investmentDate' },
+          { name: 'Stock Identifier', prop: 'stockIdentifier' },
         ],
       },
       fieldArray: {

@@ -24,7 +24,7 @@ export class AppComponent {
     {
       key: 'address',
       wrappers: ['panel'],
-      templateOptions: {label: 'Address'},
+      templateOptions: { label: 'Address' },
       fieldGroup: [
         {
           key: 'town',

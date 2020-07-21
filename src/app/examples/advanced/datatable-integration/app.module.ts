@@ -36,5 +36,4 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
   ],
   declarations: [AppComponent, DatatableTypeComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

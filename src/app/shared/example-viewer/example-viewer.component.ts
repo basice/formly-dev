@@ -1,13 +1,13 @@
 import {
   Component,
-  Input,
-  OnInit,
-  OnDestroy,
-  ViewChild,
-  ViewContainerRef,
   ComponentFactoryResolver,
   ComponentRef,
   ElementRef,
+  Input,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  ViewContainerRef,
 } from '@angular/core';
 import JSONFormatter from 'json-formatter-js';
 
@@ -59,5 +59,4 @@ export class ExampleViewerComponent implements OnInit, OnDestroy {
       this.demoComponentRef.destroy();
     }
   }
-
 }

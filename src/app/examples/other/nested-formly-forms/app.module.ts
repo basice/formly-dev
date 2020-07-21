@@ -6,7 +6,6 @@ import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
 import { PanelWrapperComponent } from './panel-wrapper.component';
 import { AppComponent } from './app.component';
-import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 @NgModule({
   imports: [
@@ -14,10 +13,9 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     ReactiveFormsModule,
     FormlyBootstrapModule,
     FormlyModule.forRoot({
-      wrappers: [{name: 'panel', component: PanelWrapperComponent}],
+      wrappers: [{ name: 'panel', component: PanelWrapperComponent }],
     }),
   ],
   declarations: [AppComponent, PanelWrapperComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

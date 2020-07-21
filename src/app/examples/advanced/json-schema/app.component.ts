@@ -39,7 +39,7 @@ export class AppComponent {
     this.http
       .get<any>(`assets/json-schema/${type}_json`)
       .pipe(
-        tap(({schema, model}) => {
+        tap(({ schema, model }) => {
           this.type = type;
           this.form = new FormGroup({});
           this.options = {};

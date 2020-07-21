@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ExamplesRouterViewerComponent } from '../../shared';
-import { CommonModule, CommonExampleConfigs, CommonExampleComponents, debugFields } from '../common';
+import { CommonExampleComponents, CommonExampleConfigs, CommonModule, debugFields } from '../common';
 
 import { AppComponent } from './app.component';
 import { FormlyPrimeNGModule } from '@ngx-formly/primeng';

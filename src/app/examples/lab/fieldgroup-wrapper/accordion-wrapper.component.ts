@@ -5,9 +5,9 @@ import { FieldWrapper } from '@ngx-formly/core';
   selector: 'formly-wrapper-accordion',
   template: `
     <accordion>
-        <accordion-group [heading]="to.label">
-            <ng-template #fieldComponent></ng-template>
-        </accordion-group>
+      <accordion-group [heading]="to.label">
+        <ng-template #fieldComponent></ng-template>
+      </accordion-group>
     </accordion>
   `,
 })

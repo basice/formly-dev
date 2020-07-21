@@ -10,5 +10,4 @@ import { AppComponent } from './app.component';
   imports: [CommonModule, ReactiveFormsModule, FormlyBootstrapModule, FormlyModule.forRoot()],
   declarations: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

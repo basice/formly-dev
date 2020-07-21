@@ -34,5 +34,4 @@ import { GridFormlyCellComponent } from './grid-formly-cell.component';
   bootstrap: [AppComponent],
   declarations: [AppComponent, GridTypeComponent, GridFormlyCellComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

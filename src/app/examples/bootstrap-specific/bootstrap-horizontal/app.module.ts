@@ -13,11 +13,10 @@ import { FormlyHorizontalWrapper } from './horizontal-wrapper';
     ReactiveFormsModule,
     FormlyBootstrapModule,
     FormlyModule.forRoot({
-      wrappers: [{name: 'form-field-horizontal', component: FormlyHorizontalWrapper}],
-      validationMessages: [{name: 'required', message: 'This field is required'}],
+      wrappers: [{ name: 'form-field-horizontal', component: FormlyHorizontalWrapper }],
+      validationMessages: [{ name: 'required', message: 'This field is required' }],
     }),
   ],
   declarations: [AppComponent, FormlyHorizontalWrapper],
 })
-export class AppModule {
-}
+export class AppModule {}

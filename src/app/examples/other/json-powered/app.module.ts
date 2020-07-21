@@ -14,5 +14,4 @@ import { UserService } from './user.service';
   declarations: [AppComponent],
   providers: [UserService],
 })
-export class AppModule {
-}
+export class AppModule {}

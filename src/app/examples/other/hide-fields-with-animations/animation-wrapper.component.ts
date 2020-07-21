@@ -77,5 +77,4 @@ const SlideInOutAnimation = [
   `,
   animations: [SlideInOutAnimation],
 })
-export class AnimationWrapperComponent extends FieldWrapper {
-}
+export class AnimationWrapperComponent extends FieldWrapper {}

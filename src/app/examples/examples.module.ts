@@ -9,7 +9,7 @@ import { SharedModule } from '@shared';
       {
         path: '',
         children: [
-          {path: '', pathMatch: 'full', redirectTo: 'introduction'},
+          { path: '', pathMatch: 'full', redirectTo: 'introduction' },
           // Intro
           {
             path: 'introduction',
@@ -22,13 +22,11 @@ import { SharedModule } from '@shared';
             children: [
               {
                 path: 'fieldgroup-wrapper',
-                loadChildren: () =>
-                  import('./lab/fieldgroup-wrapper/config.module').then((m) => m.ConfigModule),
+                loadChildren: () => import('./lab/fieldgroup-wrapper/config.module').then((m) => m.ConfigModule),
               },
               {
                 path: 'custom-template',
-                loadChildren: () =>
-                  import('./lab/custom-template/config.module').then((m) => m.ConfigModule),
+                loadChildren: () => import('./lab/custom-template/config.module').then((m) => m.ConfigModule),
               },
             ],
           },
@@ -192,7 +190,7 @@ import { SharedModule } from '@shared';
                 path: 'multi-step-form',
                 loadChildren: () => import('./advanced/multi-step-form/config.module').then((m) => m.ConfigModule),
               },
-              {path: 'tabs', loadChildren: () => import('./advanced/tabs/config.module').then((m) => m.ConfigModule)},
+              { path: 'tabs', loadChildren: () => import('./advanced/tabs/config.module').then((m) => m.ConfigModule) },
             ],
           },
 
@@ -248,5 +246,4 @@ import { SharedModule } from '@shared';
     ]),
   ],
 })
-export class ExamplesModule {
-}
+export class ExamplesModule {}
