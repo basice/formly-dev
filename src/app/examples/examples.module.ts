@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '../shared';
+import { SharedModule } from '@shared';
 
 @NgModule({
   imports: [
@@ -21,9 +21,14 @@ import { SharedModule } from '../shared';
             path: 'lab',
             children: [
               {
-                path: 'custom-templates',
+                path: 'fieldgroup-wrapper',
                 loadChildren: () =>
-                  import('./lab/custom-templates/config.module').then((m) => m.ConfigModule),
+                  import('./lab/fieldgroup-wrapper/config.module').then((m) => m.ConfigModule),
+              },
+              {
+                path: 'custom-template',
+                loadChildren: () =>
+                  import('./lab/custom-template/config.module').then((m) => m.ConfigModule),
               },
             ],
           },

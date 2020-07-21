@@ -41,7 +41,8 @@ export class AppComponent {
         { path: '/examples/introduction', title: 'Introduction Example' },
 
         { title: 'Lab' },
-        { path: '/examples/lab/custom-templates', title: 'Custom Templates (fieldGroup wrapper)' },
+        { path: '/examples/lab/fieldgroup-wrapper', title: 'fieldGroup Wrapper' },
+        { path: '/examples/lab/custom-template', title: 'Custom Template' },
 
         { title: 'Field Options' },
         { path: '/examples/field-options/expression-properties', title: 'Expression Properties' },

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ExamplesRouterViewerComponent, SharedModule } from '../../shared';
+import { ExamplesRouterViewerComponent, SharedModule } from '@shared';
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 

@@ -4,6 +4,7 @@ import { ExamplesRouterViewerComponent, SharedModule } from '@shared';
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   imports: [
     SharedModule,
@@ -15,10 +16,9 @@ import { AppComponent } from './app.component';
         data: {
           examples: [
             {
-              title: 'Input add-ons',
-              description: `This example demonstrates how to use input add-ons to decorate your input fields.`,
+              title: 'Custom Template Example',
+              description: `This is a small subset of the things that formly can do :-) See the other examples and the documentation for more.`,
               component: AppComponent,
-              deps: ['fontawesome'],
               files: [
                 {
                   file: 'app.component.html',
@@ -28,6 +28,9 @@ import { AppComponent } from './app.component';
                 },
                 {
                   file: 'app.module.ts',
+                },
+                {
+                  file: 'custom-input.component.ts',
                 },
               ],
             },

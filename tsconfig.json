@@ -14,7 +14,12 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@ngx-formly/*": ["src/*/src/public_api", "src/ui/*/src/public_api"],
+      "@assets/*": ["src/assets/*"],
+      "@shared": ["src/app/shared/index.ts"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
