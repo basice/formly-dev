@@ -40,8 +40,8 @@ export class AppComponent {
         { title: 'Intro' },
         { path: '/examples/introduction', title: 'Introduction Example' },
 
-        { title: 'My Examples' },
-        { path: '/examples/my-examples/nested-formly-forms', title: 'My Nested Forms (fieldGroup wrapper)' },
+        { title: 'Lab' },
+        { path: '/examples/lab/custom-templates', title: 'Custom Templates (fieldGroup wrapper)' },
 
         { title: 'Field Options' },
         { path: '/examples/field-options/expression-properties', title: 'Expression Properties' },
@@ -75,8 +75,6 @@ export class AppComponent {
         { path: '/examples/bootstrap-specific/input-add-ons', title: 'Input add-ons' },
 
         { title: 'Advanced' },
-        { path: '/examples/advanced/i18n', title: 'i18n ngx-translate' },
-        { path: '/examples/advanced/i18n-alternative', title: 'i18n ngx-translate (alternative approach)' },
         { path: '/examples/advanced/json-schema', title: 'Json schema' },
         { path: '/examples/advanced/repeating-section', title: 'Repeating Section' },
         { path: '/examples/advanced/repeating-section-input', title: 'Repeating Section With Length Input' },

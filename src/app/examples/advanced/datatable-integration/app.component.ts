@@ -69,7 +69,7 @@ export class AppComponent {
             type: 'input',
             key: 'stockIdentifier',
             templateOptions: {
-              label: 'Stock Identifier:',
+              // label: 'Stock Identifier:',
             },
           },
         ],

@@ -16,14 +16,14 @@ import { SharedModule } from '../shared';
             loadChildren: () => import('./introduction/config.module').then((m) => m.ConfigModule),
           },
 
-          // My Examples
+          // Lab
           {
-            path: 'my-examples',
+            path: 'lab',
             children: [
               {
-                path: 'nested-formly-forms',
+                path: 'custom-templates',
                 loadChildren: () =>
-                  import('./my-examples/nested-formly-forms/config.module').then((m) => m.ConfigModule),
+                  import('./lab/custom-templates/config.module').then((m) => m.ConfigModule),
               },
             ],
           },

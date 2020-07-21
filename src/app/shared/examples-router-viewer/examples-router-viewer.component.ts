@@ -8,7 +8,6 @@ import { ActivatedRoute } from '@angular/router';
       <formly-example-viewer
         *ngFor="let exampleData of data.examples"
         [type]="type"
-        [debugFields]="data.debugFields"
         [exampleData]="exampleData"
       >
       </formly-example-viewer>

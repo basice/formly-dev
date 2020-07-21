@@ -10,7 +10,6 @@ import {
   ElementRef,
 } from '@angular/core';
 import JSONFormatter from 'json-formatter-js';
-import { FormlyFieldConfig } from '@ngx-formly/core';
 
 export interface ExampleType {
   title: string;
@@ -29,22 +28,12 @@ export interface ExampleType {
 export class ExampleViewerComponent implements OnInit, OnDestroy {
   @Input() type: string;
   @Input() exampleData: ExampleType;
-  @Input() set debugFields(fields: FormlyFieldConfig[]) {
-    if (fields) {
-      this._debugFields = JSON.parse(JSON.stringify(fields));
-    }
-  }
 
-  _debugFields: any;
   _prevModel: any;
 
   @ViewChild('demo', { read: ViewContainerRef, static: true }) demoRef: ViewContainerRef;
   @ViewChild('modelPreview', { static: false }) modelPreviewRef: ElementRef;
   demoComponentRef: ComponentRef<any>;
-
-  /** Whether the source for the example is being displayed. */
-  showSource = false;
-  showDebug = false;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
@@ -71,7 +60,4 @@ export class ExampleViewerComponent implements OnInit, OnDestroy {
     }
   }
 
-  toggleDebugView() {
-    this.showDebug = !this.showDebug;
-  }
 }

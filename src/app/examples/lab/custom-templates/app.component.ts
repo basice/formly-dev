@@ -3,7 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 
 @Component({
-  selector: 'app-nested-forms',
+  selector: 'formly-app-example',
   templateUrl: './app.component.html',
 })
 export class AppComponent {

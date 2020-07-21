@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
         data: {
           examples: [
             {
-              title: 'Nested Forms (fieldGroup wrapper)',
+              title: 'Custom templates with fieldGroup',
               description: `
               This example demonstrates how to nest formly-form's using custom templates
             `,
