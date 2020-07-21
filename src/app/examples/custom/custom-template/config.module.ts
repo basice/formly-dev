@@ -15,8 +15,8 @@ import { AppComponent } from './app.component';
         data: {
           examples: [
             {
-              title: 'Custom Template Example',
-              description: `This is a small subset of the things that formly can do :-) See the other examples and the documentation for more.`,
+              title: 'Custom Wrapper Example',
+              description: `This is a small subset of the things that formly can do :-)`,
               component: AppComponent,
               files: [
                 {

@@ -40,9 +40,10 @@ export class AppComponent {
         { title: 'Intro' },
         { path: '/examples/introduction', title: 'Introduction Example' },
 
-        { title: 'Lab' },
-        { path: '/examples/lab/fieldgroup-wrapper', title: 'fieldGroup Wrapper' },
-        { path: '/examples/lab/custom-template', title: 'Custom Template' },
+        { title: 'Custom' },
+        { path: '/examples/custom/custom-template', title: 'Custom Template' },
+        { path: '/examples/custom/custom-wrapper', title: 'Custom Wrapper' },
+        { path: '/examples/custom/fieldgroup-wrapper', title: 'fieldGroup Wrapper' },
 
         { title: 'Field Options' },
         { path: '/examples/field-options/expression-properties', title: 'Expression Properties' },

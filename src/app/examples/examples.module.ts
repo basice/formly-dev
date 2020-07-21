@@ -16,17 +16,21 @@ import { SharedModule } from '@shared';
             loadChildren: () => import('./introduction/config.module').then((m) => m.ConfigModule),
           },
 
-          // Lab
+          // Custom
           {
-            path: 'lab',
+            path: 'custom',
             children: [
               {
-                path: 'fieldgroup-wrapper',
-                loadChildren: () => import('./lab/fieldgroup-wrapper/config.module').then((m) => m.ConfigModule),
+                path: 'custom-template',
+                loadChildren: () => import('./custom/custom-template/config.module').then((m) => m.ConfigModule),
               },
               {
-                path: 'custom-template',
-                loadChildren: () => import('./lab/custom-template/config.module').then((m) => m.ConfigModule),
+                path: 'custom-wrapper',
+                loadChildren: () => import('./custom/custom-wrapper/config.module').then((m) => m.ConfigModule),
+              },
+              {
+                path: 'fieldgroup-wrapper',
+                loadChildren: () => import('./custom/fieldgroup-wrapper/config.module').then((m) => m.ConfigModule),
               },
             ],
           },
