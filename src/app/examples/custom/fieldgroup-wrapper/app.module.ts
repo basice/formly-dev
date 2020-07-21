@@ -4,10 +4,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
-import { PanelWrapperComponent } from './panel-wrapper.component';
-import { AccordionWrapperComponent } from './accordion-wrapper.component';
 import { AppComponent } from './app.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { AccordionWrapperComponent, PanelWrapperComponent } from './custom-wrapper';
 
 @NgModule({
   imports: [
