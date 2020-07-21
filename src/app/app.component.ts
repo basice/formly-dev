@@ -11,7 +11,7 @@ export class AppComponent {
   isSmallDevice$ = this.breakpointObserver.observe([Breakpoints.XSmall]).pipe(map((result) => result.matches));
 
   menu = [
-/*    {
+    {
       path: 'guide',
       title: 'Guides',
       links: [
@@ -22,8 +22,8 @@ export class AppComponent {
         { path: '/guide/custom-formly-field', title: 'Custom Templates' },
         { path: '/guide/custom-formly-wrapper', title: 'Custom Wrapper' },
       ],
-    },*/
-/*    {
+    },
+    {
       path: 'ui',
       title: 'UI',
       links: [
@@ -32,7 +32,7 @@ export class AppComponent {
         { path: '/ui/ionic', title: 'Ionic' },
         { path: '/ui/primeng', title: 'PrimeNG' },
       ],
-    },*/
+    },
     {
       path: 'examples',
       title: 'Examples',

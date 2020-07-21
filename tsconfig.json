@@ -11,10 +11,8 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
     "paths": {
       "@ngx-formly/*": ["src/*/src/public_api", "src/ui/*/src/public_api"],
       "@assets/*": ["src/assets/*"],
@@ -24,5 +22,12 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "exclude": [
+    "src/schematics/src/*/files/**/*",
+    "index.ts",
+    "dist/**/*",
+    "cypress/**/*",
+    "node_modules/**/*"
+  ]
 }
