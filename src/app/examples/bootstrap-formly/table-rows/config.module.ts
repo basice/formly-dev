@@ -1,0 +1,47 @@
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ExamplesRouterViewerComponent, SharedModule } from '../../../shared';
+import { AppModule } from './app.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  imports: [
+    SharedModule,
+    AppModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: ExamplesRouterViewerComponent,
+        data: {
+          examples: [
+            {
+              title: 'Table Rows',
+              description: `
+              With angular-formly-bootstrap-templates, you can specify
+                <code>rows</code> for the
+                <code>textarea</code> type. You can also specify
+                <code>cols</code> but that doesn't matter because the
+                <code>.form-control</code> class will make the textarea have a width of 100% anyway.
+            `,
+              component: AppComponent,
+              files: [
+                {
+                  file: 'app.component.html',
+                },
+                {
+                  file: 'app.component.ts',
+                },
+                {
+                  file: 'app.module.ts',
+                },
+              ],
+            },
+          ],
+        },
+      },
+    ]),
+  ],
+  entryComponents: [AppComponent],
+})
+export class ConfigModule {
+}
