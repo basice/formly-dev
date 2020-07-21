@@ -49,6 +49,11 @@
         routerLinkActive="active-link"
         #routerLink="routerLinkActive"
       >
+        <span class="d-flex align-items-center">
+          {{ link.title }}
+          <span class="spacer" [style.flex]="'1 1 auto'"></span>
+          <mat-icon>{{ routerLink.isActive ? 'keyboard_arrow_down' : 'keyboard_arrow_right' }}</mat-icon>
+        </span>
       </a>
 
       <ng-container *ngIf="routerLink.isActive">
@@ -75,6 +80,10 @@
 </mat-sidenav-container>
 
 <ng-template #version>
+  <button mat-button [matMenuTriggerFor]="menu">
+    Next
+    <mat-icon>arrow_drop</mat-icon>
+  </button>
   <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
     <a disabled mat-menu-item>Next</a>
     <a href="https://formly.dev/" mat-menu-item>Latest</a>
