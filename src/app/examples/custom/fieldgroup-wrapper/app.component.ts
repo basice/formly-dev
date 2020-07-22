@@ -8,7 +8,33 @@ import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 })
 export class AppComponent {
   form = new FormGroup({});
-  model: any = {};
+  model: any = {
+    grunduppgifter: {
+      obligatoriska_uppgifter: {
+        typ_deklreg: 'INK1',
+        id_pers: '197501010001',
+        typ_sksk: '1',
+        ant_man_avdrgr: '12',
+      },
+      andra_uppgifter: {},
+      skatte_avgiftssatser: {
+        utdeb_kom: '33.7',
+        utdeb_begrav: '0.25',
+        utdeb_kyrk: '1.01',
+      }
+    },
+    privata_inkomster: {
+      tjansteinkomster: {
+        ink_tj_lon: '100000',
+        ink_tj_kostn: '15000',
+        ink_tj_apens: '50000',
+        ink_tj_ppens: '10000',
+        ink_tj_ovr: '14000',
+        ink_tj_hobby: '20000',
+        ink_tj_faab: '35000'
+      }
+    }
+  };
   options: FormlyFormOptions = {};
 
   fields: FormlyFieldConfig[] = [
@@ -23,7 +49,7 @@ export class AppComponent {
           templateOptions: {label: 'Obligatoriska uppgifter'},
           fieldGroup: [
             {
-              key: 'TYP_DEKLREG',
+              key: 'typ_deklreg',
               type: 'input',
               templateOptions: {
 
@@ -32,7 +58,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ID_PERS',
+              key: 'id_pers',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -40,7 +66,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'TYP_SKSK',
+              key: 'typ_sksk',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -48,7 +74,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ANT_MAN_AVDRGR',
+              key: 'ant_man_avdrgr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -58,12 +84,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'andra-uppgifter',
+          key: 'andra_uppgifter',
           wrappers: ['panel'],
           templateOptions: {label: 'Andra grunduppgifter'},
           fieldGroup: [
             {
-              key: 'KOD_PENSION',
+              key: 'kod_pension',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -71,7 +97,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INVANDRAD',
+              key: 'invandrad',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -79,7 +105,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'IN_UT_VANDRAD',
+              key: 'in_ut_vandrad',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -87,7 +113,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'TID_DOD',
+              key: 'tid_dod',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -95,7 +121,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'LAN',
+              key: 'lan',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -103,15 +129,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'LAN',
-              type: 'input',
-              templateOptions: {
-                type: 'text',
-                label: 'Län',
-              },
-            },
-            {
-              key: 'KOM',
+              key: 'kom',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -119,7 +137,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'SKATTEREG',
+              key: 'skattereg',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -129,12 +147,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'skatte-avgiftssatser',
+          key: 'skatte_avgiftssatser',
           wrappers: ['panel'],
           templateOptions: {label: 'Skatte- och avgiftssatser'},
           fieldGroup: [
             {
-              key: 'UTDEB_KOM',
+              key: 'utdeb_kom',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -142,7 +160,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'UTDEB_BEGRAV',
+              key: 'utdeb_begrav',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -150,7 +168,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'UTDEB_KYRK',
+              key: 'utdeb_kyrk',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -158,7 +176,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'UTDEB_SAMF1',
+              key: 'utdeb_samf1',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -166,7 +184,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'UTDEB_SAMF2',
+              key: 'utdeb_samf2',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -174,7 +192,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'UTDEB_SAMF3',
+              key: 'utdeb_samf3',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -182,7 +200,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'UTDEB_SAMF4',
+              key: 'utdeb_samf4',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -194,7 +212,7 @@ export class AppComponent {
       ],
     },
     {
-      key: 'privata-inkomster',
+      key: 'privata_inkomster',
       wrappers: ['accordion'],
       templateOptions: {label: 'Privata inkomster'},
       fieldGroup: [
@@ -204,7 +222,7 @@ export class AppComponent {
           templateOptions: {label: 'Tjänsteinkomster - lön, pension m.m.'},
           fieldGroup: [
             {
-              key: 'INK_TJ_LON',
+              key: 'ink_tj_lon',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -212,7 +230,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_TJ_KOSN',
+              key: 'ink_tj_kosn',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -220,7 +238,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_TJ_APENS',
+              key: 'ink_tj_apens',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -228,7 +246,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_TJ_PPENS',
+              key: 'ink_tj_ppens',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -236,7 +254,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_TJ_OVR',
+              key: 'ink_tj_ovr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -244,7 +262,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_TJ_HOBBY',
+              key: 'ink_tj_hobby',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -252,7 +270,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_TJ_FAAB',
+              key: 'ink_tj_faab',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -262,12 +280,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'avdrag-tjanst',
+          key: 'avdrag_tjanst',
           wrappers: ['panel'],
           templateOptions: {label: 'Avdrag under tjänst'},
           fieldGroup: [
             {
-              key: 'AVDRB_TJ_ARBRES',
+              key: 'avdrb_tj_arbres',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -275,7 +293,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_TJ_TJRES',
+              key: 'avdr_tj_tjres',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -283,7 +301,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_TJ_DUBBO',
+              key: 'avdr_tj_dubbo',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -291,7 +309,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDRB_TJ_KOSTN',
+              key: 'avdrb_tj_kostn',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -301,12 +319,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'allmana-avdrag',
+          key: 'allmana_avdrag',
           wrappers: ['panel'],
           templateOptions: {label: 'Allmäna avdrag'},
           fieldGroup: [
             {
-              key: 'AVDR_ALLM',
+              key: 'avdr_allm',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -321,7 +339,7 @@ export class AppComponent {
           templateOptions: {label: 'Skattereduktioner - underlag i deklaration'},
           fieldGroup: [
             {
-              key: 'ULAG_ROT',
+              key: 'ulag_rot',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -329,7 +347,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_RUT',
+              key: 'ulag_rut',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -337,7 +355,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_ELSKRED',
+              key: 'ulag_elskred',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -345,7 +363,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_GAVOSKRED',
+              key: 'ulag_gavoskred',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -360,7 +378,7 @@ export class AppComponent {
           templateOptions: {label: 'Privatbostad, underlag för fastighetsavgift, uppgifter för reduktion'},
           fieldGroup: [
             {
-              key: 'ULAG_FAVG_HEL_SMA',
+              key: 'ulag_favg_hel_sma',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -368,7 +386,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_FAVG_HALV_SMA',
+              key: 'ulag_favg_halv_sma',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -383,7 +401,7 @@ export class AppComponent {
           templateOptions: {label: 'Småhus/ägarlägenhet: Tomtmark, byggnad under uppförande'},
           fieldGroup: [
             {
-              key: 'ULAG_FSK_TOMT_SMA',
+              key: 'ulag_fsk_tomt_sma',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -398,7 +416,7 @@ export class AppComponent {
           templateOptions: {label: 'Kapitalinkomster - vinst vid försäljning av bostad m.m.'},
           fieldGroup: [
             {
-              key: 'INK_KAP_SCHABLON',
+              key: 'ink_kap_schablon',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -406,7 +424,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_KAP_RTAUTD',
+              key: 'ink_kap_rtautd',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -414,7 +432,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_KAP_UTHYR',
+              key: 'ink_kap_uthyr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -422,7 +440,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_KAP_AKTIE',
+              key: 'ink_kap_aktie',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -430,7 +448,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_KAP_OVR',
+              key: 'ink_kap_ovr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -438,7 +456,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'K5_K6_V',
+              key: 'k5_k6_v',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -446,7 +464,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'K7_K8_V',
+              key: 'k7_k8_v',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -456,12 +474,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'avdrag-kapital',
+          key: 'avdrag_kapital',
           wrappers: ['panel'],
           templateOptions: {label: 'Avdrag under kapital'},
           fieldGroup: [
             {
-              key: 'AVDR_KAP_RTA',
+              key: 'avdr_kap_rta',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -469,7 +487,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_KAP_AKTIE',
+              key: 'avdr_kap_aktie',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -477,7 +495,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_KAP_OVR',
+              key: 'avdr_kap_ovr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -485,7 +503,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'K5_K6_F',
+              key: 'k5_k6_f',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -493,7 +511,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'K7_K8_F',
+              key: 'k7_k8_f',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -501,7 +519,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_KAP_INVEST',
+              key: 'avdr_kap_invest',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -511,12 +529,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'utlandsk-forsakring',
+          key: 'utlandsk_forsakring',
           wrappers: ['panel'],
           templateOptions: {label: 'Utländsk försäkring - Avkastningsskatt'},
           fieldGroup: [
             {
-              key: 'ULAG_AVKAST_UTKAPF',
+              key: 'ulag_avkast_utkapf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -524,7 +542,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_AVKAST_UTPENS',
+              key: 'ulag_avkast_utpens',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -546,7 +564,7 @@ export class AppComponent {
           templateOptions: {label: 'Näringsverksamhet'},
           fieldGroup: [
             {
-              key: 'INK_NRV_AKT',
+              key: 'ink_nrv_akt',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -554,7 +572,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_NRV_HB_AKT',
+              key: 'ink_nrv_hb_akt',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -562,7 +580,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_NRV_PASS',
+              key: 'ink_nrv_pass',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -570,7 +588,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_NRV_HB_PASS',
+              key: 'ink_nrv_hb_pass',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -578,7 +596,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'BEL_INK_LIKSA',
+              key: 'bel_ink_liksa',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -586,7 +604,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'BEL_KOSTN_LIKSA',
+              key: 'bel_kostn_liksa',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -594,7 +612,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_NRV_SLP_E',
+              key: 'ulag_nrv_slp_e',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -602,7 +620,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_NRV_SLP_A',
+              key: 'ulag_nrv_slp_a',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -610,7 +628,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_NRV_AVKAST_15',
+              key: 'ulag_nrv_avkast_15',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -625,7 +643,7 @@ export class AppComponent {
           templateOptions: {label: 'Räntefördelning'},
           fieldGroup: [
             {
-              key: 'INK_KAP_RTEFORDELN',
+              key: 'ink_kap_rtefordeln',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -633,7 +651,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_KAP_RTEFORDELN',
+              key: 'avdr_kap_rtefordeln',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -648,7 +666,7 @@ export class AppComponent {
           templateOptions: {label: 'Underlag för expansionsfondsskatt'},
           fieldGroup: [
             {
-              key: 'BEL_EXPAN_OKN',
+              key: 'bel_expan_okn',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -656,7 +674,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'BEL_EXPAN_MINSKN',
+              key: 'bel_expan_minskn',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -666,12 +684,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'nedsattning-egenavgifter',
+          key: 'nedsattning_egenavgifter',
           wrappers: ['panel'],
           templateOptions: {label: 'Nedsättning av egenavgifter'},
           fieldGroup: [
             {
-              key: 'NEDS_EGENAVG_REG',
+              key: 'neds_egenavg_reg',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -681,12 +699,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'allmanna-avdrag',
+          key: 'allmanna_avdrag',
           wrappers: ['panel'],
           templateOptions: {label: 'Allmänna avdrag'},
           fieldGroup: [
             {
-              key: 'AVDR_USK_NRV',
+              key: 'avdr_usk_nrv',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -696,12 +714,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'naringsfastighet-fastighetsavgift',
+          key: 'naringsfastighet_fastighetsavgift',
           wrappers: ['panel'],
           templateOptions: {label: 'Näringsfastighet, underlag för fastighetsavgift'},
           fieldGroup: [
             {
-              key: 'ULAG_FAVG_HEL_HYR',
+              key: 'ulag_favg_hel_hyr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -709,7 +727,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_FAVG_HALV_HYR',
+              key: 'ulag_favg_halv_hyr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -719,12 +737,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'naringsfastighet-fastighetsskatt',
+          key: 'naringsfastighet_fastighetsskatt',
           wrappers: ['panel'],
           templateOptions: {label: 'Näringsfastighet, underlag för fastighetsskatt'},
           fieldGroup: [
             {
-              key: 'ULAG_FSK_TOMT_HYR',
+              key: 'ulag_fsk_tomt_hyr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -732,7 +750,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_FSK_LOKAL',
+              key: 'ulag_fsk_lokal',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -740,7 +758,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_FSK_INDUSTRI',
+              key: 'ulag_fsk_industri',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -748,7 +766,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_FSK_VATTEN',
+              key: 'ulag_fsk_vatten',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -756,7 +774,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_FSK_VIND',
+              key: 'ulag_fsk_vind',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -773,12 +791,12 @@ export class AppComponent {
       templateOptions: {label: 'Kapital - ej i deklarationsruta'},
       fieldGroup: [
         {
-          key: 'schablonintakt-uppskov',
+          key: 'schablonintakt_uppskov',
           wrappers: ['panel'],
           templateOptions: {label: 'Schablonintäkt uppskov'},
           fieldGroup: [
             {
-              key: 'INK_KAP_UPPSKOV',
+              key: 'ink_kap_uppskov',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -788,12 +806,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'reavinst-reaforlust',
+          key: 'reavinst_reaforlust',
           wrappers: ['panel'],
           templateOptions: {label: 'Reavinst och reaförlust'},
           fieldGroup: [
             {
-              key: 'INK_KAP_REA',
+              key: 'ink_kap_rea',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -801,7 +819,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_KAP_REA',
+              key: 'avdr_kap_rea',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -818,12 +836,12 @@ export class AppComponent {
       templateOptions: {label: 'Underlag för PGI och allmän pensionsavgift'},
       fieldGroup: [
         {
-          key: 'pgi-tjanst',
+          key: 'pgi_tjanst',
           wrappers: ['panel'],
           templateOptions: {label: 'PGI-tjänst'},
           fieldGroup: [
             {
-              key: 'INKT_TJ1_KUSUM',
+              key: 'inkt_tj1_kusum',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -831,7 +849,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INKT_TJ2_KUSUM',
+              key: 'inkt_tj2_kusum',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -839,7 +857,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_EJ_PGI',
+              key: 'ink_ej_pgi',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -847,7 +865,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MINK_EJ_PGI',
+              key: 'mink_ej_pgi',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -855,7 +873,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_TJ1_KUSUM_AVTAL',
+              key: 'ink_tj1_kusum_avtal',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -863,7 +881,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ARBAVG_SOCAVG',
+              key: 'arbavg_socavg',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -871,7 +889,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'SOC_KU',
+              key: 'soc_ku',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -879,7 +897,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_PGI_SOC_BR',
+              key: 'ink_pgi_soc_br',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -889,12 +907,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'pgi-skattefri',
+          key: 'pgi_skattefri',
           wrappers: ['panel'],
           templateOptions: {label: 'PGI-skattefri'},
           fieldGroup: [
             {
-              key: 'INK_PGI_SKFRI',
+              key: 'ink_pgi_skfri',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -902,7 +920,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_PGI_SKFRI_AVTAL',
+              key: 'ink_pgi_skfri_avtal',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -910,7 +928,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_NRV_PGI_SKFRI',
+              key: 'ink_nrv_pgi_skfri',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -920,12 +938,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'pgi-avdrag-tjanst',
+          key: 'pgi_avdrag_tjanst',
           wrappers: ['panel'],
           templateOptions: {label: 'PGI-avdrag-tjänst'},
           fieldGroup: [
             {
-              key: 'AVDR_TJ_PGI',
+              key: 'avdr_tj_pgi',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -933,7 +951,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MAVDR_TJ_PGI',
+              key: 'mavdr_tj_pgi',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -941,7 +959,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'R16',
+              key: 'r16',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -949,7 +967,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_TJ_EJ_PGI',
+              key: 'avdr_tj_ej_pgi',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -959,12 +977,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'pgi-hobby',
+          key: 'pgi_hobby',
           wrappers: ['panel'],
           templateOptions: {label: 'PGI-hobby'},
           fieldGroup: [
             {
-              key: 'INK_SJUKP_HOBBY',
+              key: 'ink_sjukp_hobby',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -972,7 +990,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MINK_SJUKP_HOBBY',
+              key: 'mink_sjukp_hobby',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -980,7 +998,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_PGI_HOBBY_BR',
+              key: 'ink_pgi_hobby_br',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -988,7 +1006,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MINK_PGI_HOBBY_BR',
+              key: 'mink_pgi_hobby_br',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -998,12 +1016,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'pgi-naring',
+          key: 'pgi_naring',
           wrappers: ['panel'],
           templateOptions: {label: 'PGI-näring'},
           fieldGroup: [
             {
-              key: 'INK_SJUKP_AKT',
+              key: 'ink_sjukp_akt',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1011,7 +1029,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MINK_SJUKP_AKT',
+              key: 'mink_sjukp_akt',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1019,7 +1037,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_PGISJUKPAF_BR',
+              key: 'ink_pgisjukpaf_br',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1027,7 +1045,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_NRV_PGI_BR',
+              key: 'ink_nrv_pgi_br',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1035,7 +1053,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MINK_NRV_PGI_BR',
+              key: 'mink_nrv_pgi_br',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1045,12 +1063,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'allman-pensionsavgift',
+          key: 'allman_pensionsavgift',
           wrappers: ['panel'],
           templateOptions: {label: 'Allmän pensionsavgift'},
           fieldGroup: [
             {
-              key: 'MULAG_PENS_ALLM_ANST',
+              key: 'mulag_pens_allm_anst',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1058,7 +1076,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MULAG_PENS_ALLM_AF',
+              key: 'mulag_pens_allm_af',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1075,12 +1093,12 @@ export class AppComponent {
       templateOptions: {label: 'Underlag för skattereduktioner'},
       fieldGroup: [
         {
-          key: 'skattereduktion-fastighetsavgift',
+          key: 'skattereduktion_fastighetsavgift',
           wrappers: ['panel'],
           templateOptions: {label: 'Skattereduktion för fastighetsavgift'},
           fieldGroup: [
             {
-              key: 'SJUK_AKT',
+              key: 'sjuk_akt',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1088,7 +1106,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_FAVG_HEL_SMA_RED',
+              key: 'ulag_favg_hel_sma_red',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1096,7 +1114,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_FAVG_HALV_SMA_RED',
+              key: 'ulag_favg_halv_sma_red',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1104,7 +1122,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVG_REDFAST',
+              key: 'avg_redfast',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1112,7 +1130,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MAVG_REDFAST',
+              key: 'mavg_redfast',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1122,12 +1140,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'skattereduktion-sjoman',
+          key: 'skattereduktion_sjoman',
           wrappers: ['panel'],
           templateOptions: {label: 'Skattereduktion sjömän'},
           fieldGroup: [
             {
-              key: 'DAG_SJONAR',
+              key: 'dag_sjonar',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1135,7 +1153,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'DAG_SJOFJARR',
+              key: 'dag_sjofjarr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1145,12 +1163,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'skattereduktion-pensionsavgift',
+          key: 'skattereduktion_pensionsavgift',
           wrappers: ['panel'],
           templateOptions: {label: 'Skattereduktion allmän pensionsavgift'},
           fieldGroup: [
             {
-              key: 'INK_ERSART120',
+              key: 'ink_ersart120',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1160,12 +1178,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'skattereduktion-arbetsinkomst',
+          key: 'skattereduktion_arbetsinkomst',
           wrappers: ['panel'],
           templateOptions: {label: 'Arbetsinkomst (jobbskatteavdrag)'},
           fieldGroup: [
             {
-              key: 'INK_EJ_ARBSKRED',
+              key: 'ink_ej_arbskred',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1174,7 +1192,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ULAG_ARBINK_ANST',
+              key: 'ulag_arbink_anst',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1182,7 +1200,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVDR_TJ_EJ_ARBSKRED',
+              key: 'avdr_tj_ej_arbskred',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1190,7 +1208,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_NRV_AKT_EJ_EES',
+              key: 'ink_nrv_akt_ej_ees',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1200,12 +1218,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'skattereduktion-sjukersattning',
+          key: 'skattereduktion_sjukersattning',
           wrappers: ['panel'],
           templateOptions: {label: 'Skattereduktion sjuk- och aktivitetsersättning'},
           fieldGroup: [
             {
-              key: 'ULAG_SJUKAKTSKRED',
+              key: 'ulag_sjukaktskred',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1217,17 +1235,17 @@ export class AppComponent {
       ],
     },
     {
-      key: 'utlandsk-skatt',
+      key: 'utlandsk_skatt',
       wrappers: ['accordion'],
       templateOptions: {label: 'Underlag för avräkning av utländsk skatt'},
       fieldGroup: [
         {
-          key: 'maskinell-avrakning',
+          key: 'maskinell_avrakning',
           wrappers: ['panel'],
           templateOptions: {label: 'Maskinell avräkning'},
           fieldGroup: [
             {
-              key: 'AKTIE_SUM_SK_UTL',
+              key: 'aktie_sum_sk_utl',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1235,7 +1253,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INVEST_SUM_SK_UTL',
+              key: 'invest_sum_sk_utl',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1243,7 +1261,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_KAP_UTL_AVR',
+              key: 'ink_kap_utl_avr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1251,7 +1269,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_KAP_UTL_AVR_INVEST',
+              key: 'ink_kap_utl_avr_invest',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1261,12 +1279,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'delvis-maskinell-avrakning',
+          key: 'delvis_maskinell_avrakning',
           wrappers: ['panel'],
           templateOptions: {label: 'Delvis maskinell avräkning'},
           fieldGroup: [
             {
-              key: 'SUM_BEL_UTL_AVR',
+              key: 'sum_bel_utl_avr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1274,7 +1292,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MSUM_BEL_UTL_AVR',
+              key: 'msum_bel_utl_avr',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1284,12 +1302,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'manuell-avrakning',
+          key: 'manuell_avrakning',
           wrappers: ['panel'],
           templateOptions: {label: 'Manuell avräkning'},
           fieldGroup: [
             {
-              key: 'AVRAK_SK_UTL',
+              key: 'avrak_sk_utl',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1297,7 +1315,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVT_KINK_FORV',
+              key: 'avt_kink_forv',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1305,7 +1323,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVT_SINK_FORV',
+              key: 'avt_sink_forv',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1313,7 +1331,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVT_SINK_KAP',
+              key: 'avt_sink_kap',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1321,7 +1339,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVT_EXP',
+              key: 'avt_exp',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1329,7 +1347,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVT_AVKAST_15',
+              key: 'avt_avkast_15',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1337,7 +1355,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVT_AVKAST_UTKAPF',
+              key: 'avt_avkast_utkapf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1345,7 +1363,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVT_AVKAST_UTPENS',
+              key: 'avt_avkast_utpens',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1353,7 +1371,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'CREDITI',
+              key: 'crediti',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1361,7 +1379,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ALTEX',
+              key: 'altex',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1369,7 +1387,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVRL',
+              key: 'avrl',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1377,7 +1395,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'EXPROI',
+              key: 'exproi',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1394,12 +1412,12 @@ export class AppComponent {
       templateOptions: {label: 'Skatter'},
       fieldGroup: [
         {
-          key: 'kommunal-inkomststatt',
+          key: 'kommunal_inkomststatt',
           wrappers: ['panel'],
           templateOptions: {label: 'Kommunal inkomststatt'},
           fieldGroup: [
             {
-              key: 'SK_KINK_FORV',
+              key: 'sk_kink_forv',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1407,7 +1425,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_KINK_FORV',
+              key: 'mdeb_kink_forv',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1417,12 +1435,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'statlig-inkomststatt',
+          key: 'statlig_inkomststatt',
           wrappers: ['panel'],
           templateOptions: {label: 'Statlig inkomststatt'},
           fieldGroup: [
             {
-              key: 'SK_SINK_FORV',
+              key: 'sk_sink_forv',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1430,7 +1448,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_SINK_FORV',
+              key: 'mdeb_sink_forv',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1438,7 +1456,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ACKINK',
+              key: 'ackink',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1446,7 +1464,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'SK_SINK_KAP',
+              key: 'sk_sink_kap',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1454,7 +1472,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_SINK_KAP',
+              key: 'mdeb_sink_kap',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1462,7 +1480,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'SK_EXP',
+              key: 'sk_exp',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1470,7 +1488,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_EXP',
+              key: 'mdeb_exp',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1485,7 +1503,7 @@ export class AppComponent {
           templateOptions: {label: 'Avkastningsskatt'},
           fieldGroup: [
             {
-              key: 'SK_AVKAST_15',
+              key: 'sk_avkast_15',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1493,7 +1511,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_AVKAST_15',
+              key: 'mdeb_avkast_15',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1501,7 +1519,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'SK_AVKAST_UTKAPF',
+              key: 'sk_avkast_utkapf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1509,7 +1527,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_AVKAST_UTKAPF',
+              key: 'mdeb_avkast_utkapf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1517,7 +1535,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'SK_AVKAST_UTPENS',
+              key: 'sk_avkast_utpens',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1525,7 +1543,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_AVKAST_UTPENS',
+              key: 'mdeb_avkast_utpens',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1535,12 +1553,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'sarskild-loneskatt-pension',
+          key: 'sarskild_loneskatt_pension',
           wrappers: ['panel'],
           templateOptions: {label: 'Särskild löneskatt på pension'},
           fieldGroup: [
             {
-              key: 'SK_SLP_ANST',
+              key: 'sk_slp_anst',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1548,7 +1566,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_SLP_ANST',
+              key: 'mdeb_slp_anst',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1556,7 +1574,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'SK_SLP_EGEN',
+              key: 'sk_slp_egen',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1564,7 +1582,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_SLP_EGEN',
+              key: 'mdeb_slp_egen',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1581,12 +1599,12 @@ export class AppComponent {
       templateOptions: {label: 'Egenavgifter och särskild löneskatt på vissa förvärvsinkomster'},
       fieldGroup: [
         {
-          key: 'antal-karensdagar',
+          key: 'antal_karensdagar',
           wrappers: ['panel'],
           templateOptions: {label: 'Antal karensdagar fördelat på helt år (365/366)när karens anmälts till F-k'},
           fieldGroup: [
             {
-              key: 'ANT_DAGOMR_8',
+              key: 'ant_dagomr_8',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1594,7 +1612,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ANT_DAGOMR_1',
+              key: 'ant_dagomr_1',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1602,7 +1620,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ANT_DAGOMR_2',
+              key: 'ant_dagomr_2',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1610,7 +1628,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ANT_DAGOMR_3',
+              key: 'ant_dagomr_3',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1618,7 +1636,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ANT_DAGOMR_4',
+              key: 'ant_dagomr_4',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1626,7 +1644,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'ANT_DAGOMR_5',
+              key: 'ant_dagomr_5',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1636,12 +1654,12 @@ export class AppComponent {
           ],
         },
         {
-          key: 'manuella-underlag-egenavgifter',
+          key: 'manuella_underlag_egenavgifter',
           wrappers: ['panel'],
           templateOptions: {label: 'Manuella underlag för egenavgifter'},
           fieldGroup: [
             {
-              key: 'ULAG_EGENAVGEX1',
+              key: 'ulag_egenavgex1',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1649,7 +1667,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MULAG_SJUKF',
+              key: 'mulag_sjukf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1657,7 +1675,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MULAG_FORF',
+              key: 'mulag_forf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1665,7 +1683,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MULAG_ALDPENS',
+              key: 'mulag_aldpens',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1673,7 +1691,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MULAG_EFTLPENS',
+              key: 'mulag_eftlpens',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1681,7 +1699,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MULAG_ARBM',
+              key: 'mulag_arbm',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1689,7 +1707,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MULAG_ARBSKAD',
+              key: 'mulag_arbskad',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1697,7 +1715,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MULAG_LONE',
+              key: 'mulag_lone',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1712,7 +1730,7 @@ export class AppComponent {
           templateOptions: {label: 'Särskild löneskatt på vissa förvärvsinkomster (SLF)'},
           fieldGroup: [
             {
-              key: 'INK_NRV_SLF',
+              key: 'ink_nrv_slf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1720,7 +1738,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MINK_NRV_SLF',
+              key: 'mink_nrv_slf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1728,7 +1746,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'INK_NRV_PASS_UTL',
+              key: 'ink_nrv_pass_utl',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1736,7 +1754,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'AVG_SLF',
+              key: 'avg_slf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1744,7 +1762,7 @@ export class AppComponent {
               },
             },
             {
-              key: 'MDEB_SLF',
+              key: 'mdeb_slf',
               type: 'input',
               templateOptions: {
                 type: 'text',
@@ -1761,7 +1779,7 @@ export class AppComponent {
       templateOptions: {label: 'Förseningsavgift'},
       fieldGroup: [
         {
-          key: 'AVG_FORSEN_BR',
+          key: 'avg_forsen_br',
           type: 'input',
           templateOptions: {
             type: 'text',
@@ -1769,7 +1787,7 @@ export class AppComponent {
           },
         },
         {
-          key: 'PROC_NEDS_FORSEN',
+          key: 'proc_neds_forsen',
           type: 'input',
           templateOptions: {
             type: 'text',
