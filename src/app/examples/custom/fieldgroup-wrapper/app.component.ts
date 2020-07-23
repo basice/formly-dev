@@ -21,7 +21,7 @@ export class AppComponent {
         utdeb_kom: '33.7',
         utdeb_begrav: '0.25',
         utdeb_kyrk: '1.01',
-      }
+      },
     },
     privata_inkomster: {
       tjansteinkomster: {
@@ -31,7 +31,13 @@ export class AppComponent {
         ink_tj_ppens: '10000',
         ink_tj_ovr: '14000',
         ink_tj_hobby: '20000',
-        ink_tj_faab: '35000'
+        ink_tj_faab: '35000',
+      },
+    },
+    forseningsavgift: {
+      forsen: {
+        avg_forsen_br: '12000',
+        proc_neds_forsen: '23000'
       }
     }
   };
@@ -52,7 +58,6 @@ export class AppComponent {
               key: 'typ_deklreg',
               type: 'input',
               templateOptions: {
-
                 type: 'text',
                 label: 'Typ som beräkning ska göras på',
               },
@@ -207,7 +212,7 @@ export class AppComponent {
                 label: 'Avgift till annat trossamfund 4',
               },
             },
-          ]
+          ],
         },
       ],
     },
@@ -1187,7 +1192,8 @@ export class AppComponent {
               type: 'input',
               templateOptions: {
                 type: 'text',
-                label: 'Inkomster som inte ger jobbskatteavdrag enligt KU. Framräknat från gränssnitt' +
+                label:
+                  'Inkomster som inte ger jobbskatteavdrag enligt KU. Framräknat från gränssnitt' +
                   ' eller KU Ers.kod 100,101,102,104,107,111,112,120, 121, 405,406,408,410',
               },
             },
@@ -1227,7 +1233,8 @@ export class AppComponent {
               type: 'input',
               templateOptions: {
                 type: 'text',
-                label: 'Summa sjuk- och aktivitetsersättningar. Framräknat från gränssnitt eller Ku ersättningskod 120 och 403.',
+                label:
+                  'Summa sjuk- och aktivitetsersättningar. Framräknat från gränssnitt eller Ku ersättningskod 120 och 403.',
               },
             },
           ],
@@ -1770,37 +1777,78 @@ export class AppComponent {
               },
             },
           ],
-        }
+        },
       ],
     },
+    /*
+        {
+          key: 'forseningsavgift',
+          wrappers: ['accordion'],
+          templateOptions: {label: 'Förseningsavgift'},
+          fieldGroup: [
+            {
+              key: 'avg_forsen_br',
+              type: 'input',
+              templateOptions: {
+                type: 'text',
+                label: 'Manuellt inaviserad förseningsavgift',
+              },
+            },
+            {
+              key: 'proc_neds_forsen',
+              type: 'input',
+              templateOptions: {
+                type: 'text',
+                label: 'Manuellt inaviserad nedsättning av förseningsavgift i procent',
+              },
+            },
+          ],
+        },
+    */
     {
       key: 'forseningsavgift',
       wrappers: ['accordion'],
       templateOptions: {label: 'Förseningsavgift'},
       fieldGroup: [
         {
-          key: 'avg_forsen_br',
-          type: 'input',
-          templateOptions: {
-            type: 'text',
-            label: 'Manuellt inaviserad förseningsavgift',
-          },
-        },
-        {
-          key: 'proc_neds_forsen',
-          type: 'input',
-          templateOptions: {
-            type: 'text',
-            label: 'Manuellt inaviserad nedsättning av förseningsavgift i procent',
-          },
-        },
+          key: 'forsen',
+          templateOptions: {},
+          fieldGroup: [
+            {
+              key: 'avg_forsen_br',
+              type: 'input',
+              templateOptions: {
+                type: 'text',
+                label: 'Manuellt inaviserad förseningsavgift',
+              },
+            },
+            {
+              key: 'proc_neds_forsen',
+              type: 'input',
+              templateOptions: {
+                type: 'text',
+                label: 'Manuellt inaviserad nedsättning av förseningsavgift i procent',
+              },
+            },
+          ]
+        }
       ],
     },
   ];
 
   submit() {
+
+    let acc;
+    Object.values(this.model).forEach(v1 => {
+      Object.values(v1).forEach(v2 => {
+        acc = {...acc, ...v2};
+      });
+    });
+    console.log(acc);
+
     if (this.form.valid) {
       alert(JSON.stringify(this.model));
     }
   }
+
 }
